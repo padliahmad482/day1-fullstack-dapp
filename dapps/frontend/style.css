@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at center, #1a3a4a, #0d1117);
+  color: #ffffff;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 350px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  padding: 28px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Efek bayangan berlapis agar terlihat mengapung */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: linear-gradient(135deg, #fff 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.4));
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; /* Penting untuk efek shimmer */
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 15px rgba(99, 102, 241, 0.3);
+}
+
+/* Efek Kilat */
+button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+
+button:hover::after {
+  left: 120%;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 20px rgba(168, 85, 247, 0.4);
+}
+
+.card {
+  margin-top: 15px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #6366f1;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-left: 4px solid #a855f7;
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(5px);
+}
+
+#address {
+  font-family: "Fira Code", monospace;
+  font-size: 11px;
+  color: #38bdf8;
+  opacity: 0.9;
+}
