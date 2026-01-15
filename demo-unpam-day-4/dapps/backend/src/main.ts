@@ -6,8 +6,10 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-    .setTitle('Tugas Day-4 - Ahmad Padli - 231011401999') 
-    .setDescription('API untuk Simple Storage dApp - Dokumentasi Backend NestJS')
+    .setTitle('Tugas Day-4 - Ahmad Padli - 231011401999')
+    .setDescription(
+      'API untuk Simple Storage dApp - Dokumentasi Backend NestJS',
+    )
     .setVersion('1.0')
     .addTag('blockchain')
     .build();
