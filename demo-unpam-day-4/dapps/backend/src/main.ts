@@ -6,10 +6,10 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-    .setTitle('Simple Storage dApp API')
-    .setDescription('The Simple Storage dApp API description')
+    .setTitle('Tugas Day-4 - Ahmad Padli - 231011401999') 
+    .setDescription('API untuk Simple Storage dApp - Dokumentasi Backend NestJS')
     .setVersion('1.0')
-    .addTag('simple-storage')
+    .addTag('blockchain')
     .build();
 
   const documentFactory = () => SwaggerModule.createDocument(app, config);
